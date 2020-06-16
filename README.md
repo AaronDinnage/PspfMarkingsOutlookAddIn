@@ -1,2 +1,2 @@
-# PspfMarkingsOutlookAddIn
-Add PSPF Markings to Outlook Meetings and Appointments
+# PSPF Markings Outlook AddIn
+Experimental VSTO AddIn to add PSPF Markings to Outlook Meetings and Appointments
