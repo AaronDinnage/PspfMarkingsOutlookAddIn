@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<Config xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <RegexSubject>\s*\[(?:SEC=(?&lt;sec&gt;[^,\]]+)|DLM=(?&lt;dlm&gt;[^,\]]+)|SEC=(?&lt;sec&gt;[^,\]]+),\s*DLM=(?&lt;dlm&gt;[^,\]]+))(?:,\s*CAVEAT=(?&lt;caveat&gt;[^,\]]+))*(?:,\s*EXPIRES=(?&lt;expires&gt;[^,\]]+),\s*DOWNTO=(?&lt;downTo&gt;[^,\]]+))?(?:,\s*ACCESS=(?&lt;access&gt;[^,\]]+))*]\s*</RegexSubject>
+  <RegexHeader>\s*(?:VER=(?&lt;ver&gt;[^,]+))(?:,\s*NS=(?&lt;ns&gt;[^,]+))(?:,\s*SEC=(?&lt;sec&gt;[^,]+))?(?:,\s*DLM=(?&lt;dlm&gt;[^,]+))?(?:,\s*CAVEAT=(?&lt;caveat&gt;[^,]+))*(?:,\s*EXPIRES=(?&lt;expires&gt;[^,]+),\s*DOWNTO=(?&lt;downTo&gt;[^,]+))?(?:,\s*ACCESS=(?&lt;access&gt;[^,]+))*(?:,\s*NOTE=(?&lt;note&gt;[^,]+))?(?:,\s*ORIGIN=(?&lt;origin&gt;[^,]+))?\s*</RegexHeader>
+  <RegexOptionSet>IgnoreCase CultureInvariant</RegexOptionSet>
+  <PspfHeaderName>http://schemas.microsoft.com/mapi/string/{00020386-0000-0000-C000-000000000046}/x-protective-marking</PspfHeaderName>
+  <MsipLabelsHeaderName>http://schemas.microsoft.com/mapi/string/{00020386-0000-0000-C000-000000000046}/msip_labels/0x0000001F</MsipLabelsHeaderName>
+  <ApplyPspfSubjectToMail>true</ApplyPspfSubjectToMail>
+  <ApplyPspfXHeaderToMail>true</ApplyPspfXHeaderToMail>
+  <ApplyPspfBodyHeaderToMail>true</ApplyPspfBodyHeaderToMail>
+  <ApplyPspfSubjectToMeetings>true</ApplyPspfSubjectToMeetings>
+  <ApplyPspfXHeaderToMeetings>true</ApplyPspfXHeaderToMeetings>
+  <ApplyPspfBodyHeaderToMeetings>true</ApplyPspfBodyHeaderToMeetings>
+  <RequireMeetingLabel>true</RequireMeetingLabel>
+  <RequireMeetingLabelMessage>This email cannot be sent without a label. Please select:</RequireMeetingLabelMessage>
+  <ProtectiveMarkings>
+    <ProtectiveMarking DisplayName="Unofficial" Version="2018.1" Namespace="gov.au" SecurityClassification="UNOFFICIAL" MsipLabel="Unofficial" MailBodyHeaderText="UNOFFICIAL" MailBodyHeaderColour="red" MailBodyHeaderAlign="center" MailBodyHeaderSizePoints="12" MailBodyHeaderFont="helvetica" />
+    <ProtectiveMarking DisplayName="Official" Version="2018.1" Namespace="gov.au" SecurityClassification="OFFICIAL" MsipLabel="Internal" MailBodyHeaderText="OFFICIAL" MailBodyHeaderColour="red" MailBodyHeaderAlign="center" MailBodyHeaderSizePoints="12" MailBodyHeaderFont="helvetica" />
+    <ProtectiveMarking DisplayName="Official:Sensitive" Version="2018.1" Namespace="gov.au" SecurityClassification="OFFICIAL:Sensitive" MsipLabel="Official Sensitive" MailBodyHeaderText="OFFICIAL:Sensitive" MailBodyHeaderColour="red" MailBodyHeaderAlign="center" MailBodyHeaderSizePoints="12" MailBodyHeaderFont="helvetica" />
+    <ProtectiveMarking DisplayName="Official:Sensitive (Personal-Privacy)" Version="2018.1" Namespace="gov.au" SecurityClassification="OFFICIAL:Sensitive" MsipLabel="Official Sensitive Personal-Privacy" MailBodyHeaderText="OFFICIAL:Sensitive (Personal-Privacy)" MailBodyHeaderColour="red" MailBodyHeaderAlign="center" MailBodyHeaderSizePoints="12" MailBodyHeaderFont="helvetica">
+      <InformationManagementMarkers>Personal-Privacy</InformationManagementMarkers>
+    </ProtectiveMarking>
+    <ProtectiveMarking DisplayName="Official:Sensitive (Legal-Privilege)" Version="2018.1" Namespace="gov.au" SecurityClassification="OFFICIAL:Sensitive" MsipLabel="Official Sensitive Legal-Privilege" MailBodyHeaderText="OFFICIAL:Sensitive (Legal-Privilege)" MailBodyHeaderColour="red" MailBodyHeaderAlign="center" MailBodyHeaderSizePoints="12" MailBodyHeaderFont="helvetica">
+      <InformationManagementMarkers>Legal-Privilege</InformationManagementMarkers>
+    </ProtectiveMarking>
+    <ProtectiveMarking DisplayName="Official:Sensitive (Legislative-Secrecy)" Version="2018.1" Namespace="gov.au" SecurityClassification="OFFICIAL:Sensitive" MsipLabel="Official Sensitive Legislative-Secrecy" MailBodyHeaderText="OFFICIAL:Sensitive (Legislative-Secrecy)" MailBodyHeaderColour="red" MailBodyHeaderAlign="center" MailBodyHeaderSizePoints="12" MailBodyHeaderFont="helvetica">
+      <InformationManagementMarkers>Legislative-Secrecy</InformationManagementMarkers>
+    </ProtectiveMarking>
+    <ProtectiveMarking DisplayName="Protected" Version="2018.1" Namespace="gov.au" SecurityClassification="PROTECTED" MsipLabel="Protected" MailBodyHeaderText="PROTECTED" MailBodyHeaderColour="red" MailBodyHeaderAlign="center" MailBodyHeaderSizePoints="12" MailBodyHeaderFont="helvetica" />
+    <ProtectiveMarking DisplayName="Protected (Personal-Privacy)" Version="2018.1" Namespace="gov.au" SecurityClassification="PROTECTED" MsipLabel="Protected Personal-Privacy" MailBodyHeaderText="PROTECTED (Personal-Privacy)" MailBodyHeaderColour="red" MailBodyHeaderAlign="center" MailBodyHeaderSizePoints="12" MailBodyHeaderFont="helvetica">
+      <InformationManagementMarkers>Personal-Privacy</InformationManagementMarkers>
+    </ProtectiveMarking>
+    <ProtectiveMarking DisplayName="Protected (Legal-Privilege)" Version="2018.1" Namespace="gov.au" SecurityClassification="PROTECTED" MsipLabel="Protected Legal-Privilege" MailBodyHeaderText="PROTECTED (Legal-Privilege)" MailBodyHeaderColour="red" MailBodyHeaderAlign="center" MailBodyHeaderSizePoints="12" MailBodyHeaderFont="helvetica">
+      <InformationManagementMarkers>Legal-Privilege</InformationManagementMarkers>
+    </ProtectiveMarking>
+    <ProtectiveMarking DisplayName="Protected (Legislative-Secrecy)" Version="2018.1" Namespace="gov.au" SecurityClassification="PROTECTED" MsipLabel="Protected Legislative-Secrecy" MailBodyHeaderText="PROTECTED (Legislative-Secrecy)" MailBodyHeaderColour="red" MailBodyHeaderAlign="center" MailBodyHeaderSizePoints="12" MailBodyHeaderFont="helvetica">
+      <InformationManagementMarkers>Legislative-Secrecy</InformationManagementMarkers>
+    </ProtectiveMarking>
+    <ProtectiveMarking DisplayName="Protected (Cabinet)" Version="2018.1" Namespace="gov.au" SecurityClassification="PROTECTED" MsipLabel="Protected Cabinet" MailBodyHeaderText="PROTECTED (Cabinet)" MailBodyHeaderColour="red" MailBodyHeaderAlign="center" MailBodyHeaderSizePoints="12" MailBodyHeaderFont="helvetica">
+      <Caveats>RI:CABINET</Caveats>
+    </ProtectiveMarking>
+  </ProtectiveMarkings>
+</Config>
